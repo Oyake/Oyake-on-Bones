@@ -165,6 +165,7 @@ NAVIGATION STYLES
 }
 nav[role=navigation] {
     margin: 0;
+    min-width: 250px;
 }
 	nav[role=navigation] .menu {
 		font-family: sans-serif;
@@ -257,10 +258,15 @@ POSTS & CONTENT STYLES
                     text-decoration: none;
                     border-bottom: 1px solid #999;
                 }
+                .meta .category a {
+                    color: #666;
+                    text-decoration: none;
+                    border-bottom: 1px solid #999;
+                }
 			
 		/* post content */
                 .post_content {
-                    color: #222;
+                    color: #252525;
                 }
 			
                 .post_content p {
@@ -282,7 +288,12 @@ POSTS & CONTENT STYLES
 			.post_content dt {}
 			.post_content dd {}
 			
-			.post_content img {}
+                        .post_content img {
+                            margin: 8px;
+                            padding: 8px;
+                            background: #efefef;
+                            box-shadow: 0 0 2px #a2a2a2;
+                        }
 			.post_content video {}
 			.post_content object {}
 			.post_content pre, .post_content code {
@@ -352,7 +363,7 @@ COMMENT STYLES
 #comments {}/* h3 comment title */
 	#comments span { 
 		font-weight: 700;
-		color: #1a90db; 
+		color: #252525; 
 	} /* number of comments span */
 	
 .comment-nav {}
