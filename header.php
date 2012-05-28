@@ -26,13 +26,6 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 		
-		<!-- mobile optimized -->
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<!-- IE6 toolbar removal -->
-		<meta http-equiv="imagetoolbar" content="false" />
-		<!-- allow pinned sites -->
-		<meta name="application-name" content="<?php bloginfo('name'); ?>" />
-		
 		<!-- icons & favicons (for more: http://themble.com/support/adding-icons-favicons/) -->
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 
@@ -40,8 +33,11 @@
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/normalize.css">		
 		
 		<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-		<script>window.jQuery || document.write(unescape('%3Cscript src="<?php echo get_template_directory_uri(); ?>/library/js/libs/jquery-1.6.2.min.js"%3E%3C/script%3E'))</script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write(unescape('%3Cscript src="<?php echo get_template_directory_uri(); ?>/library/js/libs/jquery-1.7.1.min.js"%3E%3C/script%3E'))</script>
+		
+		<!-- drop Google Analytics Here -->
+		<!-- end analytics -->
 		
 		<!-- modernizr -->
 		<script src="<?php echo get_template_directory_uri(); ?>/library/js/modernizr.full.min.js"></script>
@@ -62,16 +58,18 @@
 			
 			<header role="banner">
 			
-				<div id="inner-header" class="clearfix">
+				<div id="inner-header" class="col300 right last clearfix">
 				
-					<p id="logo" class="col540 left clearfix">
+					<p id="logo" class="clearfix">
                                             <a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a>
                                         </p>
-                                        
-                                        <div id="zen-space" class="col300 right clearfix">
-                                            &nbsp;
-                                        </div>
+                                
+                                        <nav class="clearfix" role="navigation">
+                                                <div id="zen-space"></div>
+                                                <?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
+                                        </nav>
 				
 				</div> <!-- end #inner-header -->
 			
 			</header> <!-- end header -->
+                        

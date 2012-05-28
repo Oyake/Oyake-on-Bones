@@ -2,7 +2,7 @@
 			
 			<div id="content" class="clearfix">
 			
-				<div id="main" class="col620 left clearfix" role="main">
+				<div id="main" class="col620 left first clearfix" role="main">
 				
 					<?php if (is_category()) { ?>
 						<h1 class="archive_title h2">
@@ -32,7 +32,7 @@
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
+					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 						
 						<header>
 							
@@ -88,8 +88,6 @@
 					<?php endif; ?>
 			
 				</div> <!-- end #main -->
-    
-				<?php get_sidebar(); // sidebar 1 ?>
     
 			</div> <!-- end #content -->
 

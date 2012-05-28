@@ -1,143 +1,36 @@
 /* 
-    Theme Name: Oyake
-    Theme URI: https://github.com/Oyake/Oyake-on-Bones
-    Author: King Sidharth and Aniket Pant
-    Author URI: http://aniketpant.com/
-    Description: Derived and Built using bones
-    Version: 1.0
-    Tags: html5, css3, minimalist, zen
-
-    License: GPL or whatever
-    License URI: http://www.gnu.org/copyleft/gpl.html
+Theme Name: Oyake
+Theme URI: https://github.com/Oyake/Oyake-on-Bones
+Description: Derived and Built using bones
+Author: Aniket Pant
+Author URI: http://aniketpant.com/
+Version: 1.1
+Tags: html5, css3, minimalist, zen
+Template: bones
 */
 
-/******************************************************************
-COMMON & REUSABLE STYLES
-******************************************************************/
-
-/* floats */
-.left { float: left; }
-.right { float: right; }
-
-/* text alignment */
-.text-left { text-align: left; }
-.text-center { text-align: center; }
-.text-right { text-align: right; }
-
-/* highlighting search term on search page */
-mark, .search-term { background: #EBE16F; }
-
-/* alerts & notices */
-.help, .info, .error, .success { margin: 10px; padding: 5px 18px; border: 1px solid #cecece; }
-.help { border-color: #E0C618; background: #EBE16F; }
-.info { border-color: #92cae4; background: #d5edf8; }
-.error { border-color: #fbc2c4; background: #fbe3e4; }
-.success { border-color: #c6d880; background: #e6efc2; } 
+@import "../bones/style.css";
 
 /******************************************************************
-GENERAL LAYOUT STYLES
+TYPOGRAPHY
 ******************************************************************/
-
-body { 
-	background: #fefefe;
-        line-height: 1.5em;
-}
-
-/******************************************************************
-FONTS
-******************************************************************/
-
 body {
     font-family: 'Droid Serif', serif;
 }
 
 /******************************************************************
-GRID STYLES
-******************************************************************/
-
-/* 960 Grid System (http://960.gs/ ) */
-
-#container, .wrap { 
-	width: 940px;
-	margin: 0 auto;
-	padding: 0 10px;
-}
-	
-	/* layout options ( all have margins right & left of 2.1276596%) */
-	.col60  { width: 6.3829787%; } /* width 60px  / grid_1  */
-	.col140 { width: 14.893617%; } /* width 140px / grid_2  */
-	.col220 { width: 23.404255%; } /* width 220px / grid_3  */
-	.col300 { width: 31.914894%; } /* width 300px / grid_4  */
-	.col380 { width: 40.425532%; } /* width 380px / grid_5  */
-	.col480 { width: 51.06383%;  } /* width 480px / grid_6  */
-	.col540 { width: 57.446809%; } /* width 540px / grid_7  */
-	.col620 { width: 65.957447%; } /* width 620px / grid_8  */
-	.col700 { width: 74.468085%; } /* width 700px / grid_9  */
-	.col780 { width: 82.978723%; } /* width 780px / grid_10 */
-	.col860 { width: 91.489362%; } /* width 860px / grid_11 */
-	.col940 { width: 100.0%;     } /* width 940px / grid_12 */
-	
-	/* layout & column defaults */
-	*[class^="col"] { display: inline; float: left; position: relative;
-		margin-left: 2.1276596%;   /* 20px */ 
-		margin-right: 2.1276596%;  /* 20px */
-		position: relative;
-	}
-	
-	/* default styles & fixes */
-	#main { margin-left: 0; } /* fixes alignment (defaulted at col620) */
-	#sidebar1 { margin-right: 0; } /* fixes alignment (defaulted at col300) */
-	
-/******************************************************************
 LINK STYLES
 ******************************************************************/
 
-a, a:visited { color: #1d4bad; text-decoration: none; }
-a:hover, a:focus { }
-a:active { } /* on click */
+a, a:visited { color: #666; }
+a:hover, a:focus { color: #333; }
+a:active {} /* on click */
 a:link { -webkit-tap-highlight-color : rgba(0,0,0,0); /* this highlights links on Iphones / iPads */ }
-
-/******************************************************************
-TEXT SELECTION STYLES
-******************************************************************/
-
-/* Highlighted Text */
-::selection { 
-	background: #6fc2f6; 
-	color:#fff; 
-	text-shadow : none; 
-}
-
-/* Firefox */
-::-moz-selection { 
-	background: #6fc2f6; 
-	color:#fff; 
-	text-shadow : none; 
-}
-
-/******************************************************************
-HEADLINES & TITLES
-******************************************************************/
-
-h1, .h1 {}
-h2, .h2 {}
-h3, .h3 {}
-h4, .h4 {}
-h5, .h5 {}
-
-h1, h2, h3, h4, h5 {
-    font-family: Molengo,"Trebuchet MS",Corbel,Arial,sans-serif;
-}
-h1 a, h2 a, h3 a, h4 a, h5 a {
-    font-family: Molengo,"Trebuchet MS",Corbel,Arial,sans-serif;
-}
 
 /******************************************************************
 HEADER SYTLES
 ******************************************************************/
 
-header[role=banner] {
-}
 #logo {
     font-family: 'Droid Serif', serif;
     padding: 1em 0;
@@ -147,16 +40,18 @@ header[role=banner] {
 #logo a {
     font-size: 1.8em;
     letter-spacing: -1px;
-    color: #333;
+    color: #666;
+    text-decoration: none;
 }
 #logo a:hover {
-    color: #1d4bad;
+    color: #333;
 }
 
 /******************************************************************
 NAVIGATION STYLES
 (Main Navigation)
 ******************************************************************/
+
 #zen-space {
     font-size: 1.8em;
     padding: 0.5em 0;
@@ -167,493 +62,48 @@ nav[role=navigation] {
     margin: 0;
     min-width: 250px;
 }
+
 	nav[role=navigation] .menu {
-		font-family: sans-serif;
+                margin: 0;
+		font-family: 'Droid Sans', sans-serif;
 	}
-	nav[role=navigation] .menu ul { 
+	nav[role=navigation] .menu ul {
 		background: #acacac;
 	}
-        nav[role=navigation] .menu ul li {
-                float: none;
-        }
+		nav[role=navigation] .menu ul li {
+                        float: none;
+		}
 			nav[role=navigation] .menu ul li a { 
 				color: #eee;
                                 background: #acacac;
 				padding: 10px 20px;
                                 display: block;
                                 text-transform: uppercase;
+																text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.25);
 			}
 				nav[role=navigation] .menu ul li a:hover { 
-                                    color: #f9f9f9;
-                                    background: #919191;
+                                        background: #919191;
+                                        color: #f9f9f9;
 				}
-				
-				nav[role=navigation] .menu ul li:first-child a {}
-				
-                                nav[role=navigation] .menu ul li.current-menu-item a, .nav ul li.current_page_item a {
-                                    color: #f9f9f9;
-                                    background: #919191;
-                                }
-		
-		nav[role=navigation] .menu ul li ul.sub-menu, nav[role=navigation] .menu ul li ul.children {
-			background: #acacac;
-		}
-			nav[role=navigation] .menu ul li ul li a {}
-				nav[role=navigation] .menu ul li ul li a:hover {}
-			nav[role=navigation] .menu ul li ul li:last-child a {}
-			nav[role=navigation] .menu ul li:hover ul { }
-				nav[role=navigation] .menu ul li ul li ul.sub-menu { }
-					nav[role=navigation] .menu ul li ul li:hover ul.sub-menu { }
-
-
+                                
 /******************************************************************
 POSTS & CONTENT STYLES
 ******************************************************************/
 
-#content {}
-	#main {}
-	
-		article[id*=post-] {
-			padding: 1em 20px 0;
-		}
-                
-                article[id*=post-] header h1 a {
-                    color: #333;
-                    font-weight: bold;
-                }
-                article[id*=post-] header h1 a:hover {
-                    color: #1d4bad;
-                }
-		
-		.single-title {}
-                .page-title {
-                    font-size: 1.75em;
-                }
-		.archive_title {
-			padding: 0 20px;
-		}
-	
-		/* want to style individual post classes? Booya! */
-		.post-id {} /* post by id (i.e. post-3) */
-		.post {} /* general post style */
-		.page {} /* general article on a page style */
-		.attachment {} /* general style on an attatchment */
-		.sticky {} /* sticky post style */
-		.hentry {} /* hentry class */
-		.category-slug {} /* style by category (i.e. category-videos) */
-		.tag-slug {} /* style by tag (i.e. tag-news) */
-	
-		/* post meta */
-                .meta {
-                    font-size: 0.75em;
-                    text-transform: uppercase;
-                }
-                .meta time {
-                }
-                .meta time:hover {
-                    cursor: help;
-                }
-                .meta .author a {
-                    color: #666;
-                    text-decoration: none;
-                    border-bottom: 1px solid #999;
-                }
-                .meta .category a {
-                    color: #666;
-                    text-decoration: none;
-                    border-bottom: 1px solid #999;
-                }
-			
-		/* post content */
-                .post_content {
-                    color: #252525;
-                }
-			
-                .post_content p {
-                    font-size: 1.15em;
-                }
-			.post_content ul, .post_content ol, .post_content table, .post_content dl {}
-			.post_content ul, .post_content ol {}
-			.post_content li {}
-			.post_content ul li {}
-			.post_content ol li {}
-			
-			.post_content h2 {}
-			.post_content h3 {}
-			
-			.post_content blockquote {}
-			.post_content blockquote:before {} /* this adds the quote before the blockquote */
-			
-			.post_content dl {}
-			.post_content dt {}
-			.post_content dd {}
-			
-                        .post_content img {
-                            margin: 8px;
-                            padding: 8px;
-                            background: #efefef;
-                            box-shadow: 0 0 2px #a2a2a2;
-                        }
-			.post_content video {}
-			.post_content object {}
-			.post_content pre, .post_content code {
-				font-size: 0.9em;
-				line-height: 1.7em;
-				padding: 1em;
-				background: #eee;
-				border: 2px solid #cecece;
-			}
-			
-			.wp-caption {}
-			.wp-caption img {}
-			.wp-caption p.wp-caption-text {}
-			
-			/* image gallery styles */
-			.gallery dl {}
-			.gallery dt {}
-			.gallery dd {}
-			.gallery dl a {}
-			.gallery dl img {}
-			.gallery-caption {}
-			
-			.size-full {}
-			.size-large {}
-			.size-medium {}
-			.size-thumbnail {}
-			
-		article[id*=post-] footer {}
-	
-	
+#main { margin: 1.1em 0 0; }
+.hentry { padding: 1em 20px 0; }
+.hentry:first-of-type { padding: 2.2em 20px 0; }
+.hentry footer { padding-bottom: 0 }
+.single-title, .page-title, .hentry header h1 a {
+    font-family: 'Droid Serif', serif;
+}
+
 /******************************************************************
 PAGE NAVI STYLES
 (Special Feature)
 ******************************************************************/
 
 /* page navigation */
-.page-navigation, .wp-prev-next { }
-	.bones_page_navi, .wp-prev-next ul { }
-		.bones_page_navi li { } /* regular links */
-			.bones_page_navi li a { padding: 3px 6px; }
-				.bones_page_navi li a:hover { color: #f01d4f; }
-		.bones_page_navi li.bpn-current { padding: 3px 6px; border-bottom: 2px solid #f01d4f; } /* current page link */
-				.bones_page_navi li.bpn-current:hover {}
-		.bones_page_navi li.bpn-prev-link { } /* previous link */
-			.bones_page_navi li.bpn-prev-link a { padding: 0; }
-				.bones_page_navi li.bpn-prev-link a:hover { background: none; }
-		.bones_page_navi li.bpn-next-link { font-weight: 700; } /* next page link */
-			.bones_page_navi li.bpn-next-link a { padding: 0; }
-				.bones_page_navi li.bpn-next-link a:hover { background: none; }
-		.bones_page_navi li.bpn-last-page-link {} /* last page link */
-			.bones_page_navi li.bpn-last-page-link a {}
-				.bones_page_navi li.bpn-last-page-link a:hover { background: none; }
-		.bones_page_navi li.bpn-first-page-link {} /* first page link */
-			.bones_page_navi li.bpn-first-page-link a {}
-				.bones_page_navi li.bpn-first-page-link a:hover { background: none; }
-	
-	/* fallback previous & next links */
-	.wp-prev-next {}
-		.wp-prev-next ul {}
-			.wp-prev-next .prev-link {}
-			.wp-prev-next .next-link {}
-	
-/******************************************************************
-COMMENT STYLES
-******************************************************************/
 
-#comments {}/* h3 comment title */
-	#comments span { 
-		font-weight: 700;
-		color: #252525; 
-	} /* number of comments span */
-	
-.comment-nav {}
-	.comment-nav ul {}
-		.comment-nav ul li {}
-		
-.commentlist {
-	margin: 0 20px;
-}
-	.commentlist li {
-		margin-bottom: 1.5em; 
-		padding: 0.7335em 10px;
-	}
-		.commentlist li[class*=depth-] {
-			padding-left: 20px; 
-			margin-top: 1.1em;
-		}
-			.commentlist li.depth-1 {
-				margin-left: 0; 
-				margin-top: 0;
-			}
-				.commentlist li:not(.depth-1) { 
-					margin-right: -10px; 
-					margin-top: 0; 
-					padding-bottom: 0; 
-				}
-			.commentlist li.depth-2 {}
-			.commentlist li.depth-3 {}
-			.commentlist li.depth-4 {}
-			.commentlist li.depth-5 {}
-			.commentlist li:last-child { 
-				margin-bottom: 0; 
-			}
-				.commentlist li ul.children li {}
-				.commentlist li ul.children li.alt {}
-				.commentlist li ul.children li.byuser {}
-				.commentlist li ul.children li.comment {}
-				.commentlist li ul.children li.depth-1 {} /* change number for different depth */
-				.commentlist li ul.children li.bypostauthor {}
-				.commentlist li ul.children li.comment-author-admin {}
-				.commentlist li ul.children .alt {}
-				.commentlist li ul.children .odd {}
-				.commentlist li ul.children .even {}
-			.commentlist .alt {}
-			.commentlist .odd { background: #eee; }
-			.commentlist .even { background: #fefefe; }
-			.commentlist .parent {}
-			.commentlist .comment {}
-			.commentlist .children { border-left: 2px solid #6ac8d3; }
-			.commentlist .pingback {}
-			.commentlist .bypostauthor {}
-			.commentlist .comment-author {}
-			.commentlist .comment-author-admin {}
-			.commentlist .thread-alt {}
-			.commentlist .thread-odd {}
-			.commentlist .thread-even {}	
-			
-			.commentlist .vcard { margin-left: 55px; }
-				.commentlist .vcard cite.fn { font-weight: 700; font-style: normal; }
-				.commentlist .vcard time { float: right; }
-					.commentlist .vcard time a { color: #999; }
-						.commentlist .vcard time a:hover { text-decoration: underline; }
-				.commentlist .vcard img.photo {}
-				.commentlist .vcard img.avatar { position: absolute; left: 20px; padding: 2px; border: 1px solid #cecece; background: #fff; }
-					.commentlist .vcard cite.fn a.url {}
-				.commentlist .comment-meta {} 
-					.commentlist .comment-meta a {}
-				.commentlist .commentmetadata {}
-					.commentlist .commentmetadata a {}
-			.commentlist li .comment_content { margin-left: 55px; }
-				.commentlist li .comment_content p { margin: 0.7335em 0 1.5em; }
-				.commentlist li ul { }		
-				.commentlist .comment-reply-link { text-decoration: none; float: right;  background: #4598bb; padding: 3px 5px; color: #fff; opacity: 0.65; margin-bottom: 10px; font-weight: 700; }
-					.commentlist a.comment-reply-link:hover { opacity: 1; }
-			
-				
-/******************************************************************
-COMMENT FORM STYLES
-******************************************************************/
-
-#respond {}
-	#comment-form-title {}
-		#cancel-comment-reply {}
-			#cancel-comment-reply a {}
-	#commentform {}
-		.comments-logged-in-as {}
-		#comment-form-elements {}
-			#comment-form-elements li {}
-				#comment-form-elements label {}
-				#author, #email, #url, #comment {}
-					#author:focus, #email:focus, #url:focus, #comment:focus {}
-				#author, #email, #url {}
-			#allowed_tags {}
-				#comment {}
-				#submit {}
-
-/******************************************************************
-SIDEBARS & ASIDES
-******************************************************************/
-
-#sidebar1 {
-	margin-top: 2.2em;
-}
-
-	.widget {
-		padding: 0 10px;
-		margin: 2.2em 0; 
-	}
-		.widget li {
-			margin-bottom: 0.75em; 
-		}
-		
-		.widget li ul { 
-			margin-top: 0.75em; 
-			padding-left: 1em; 
-		}
-		
-		.widgettitle {
-			border-bottom: 2px solid #444; 
-			margin-bottom: 0.75em;
-		}
-
-	/* links widget */
-	.widget_links {}
-	.widget_links ul {}
-	.widget_links ul li {}
-	.widget_links ul li a {}
-	
-	/* meta widget */
-	.widget_meta {}
-	.widget_meta ul {}
-	.widget_meta ul li {}
-	.widget_meta ul li a {}
-	
-	/* pages widget */
-	.widget_pages {}
-	.widget_pages ul {}
-	.widget_pages ul li {}
-	.widget_pages ul li a {}
-	
-	/* recent-posts widget */
-	.widget_recent_entries {}
-	.widget_recent_entries ul {}
-	.widget_recent_entries ul li {}
-	.widget_recent_entries ul li a {}
-	
-	/* archives widget */
-	.widget_archive {}
-	.widget_archive ul {}
-	.widget_archive ul li {} 
-	.widget_archive ul li a {}
-	.widget_archive select {}
-	.widget_archive option {}
-	
-	/* tag-cloud widget */
-	.widget_links {}
-	.widget_links li:after {}
-	.widget_links li:before {}
-	.widget_tag_cloud {}
-	.widget_tag_cloud a {}
-	.widget_tag_cloud a:after {}
-	.widget_tag_cloud a:before {}
-	
-	/* calendar widget */
-	.widget_calendar {}
-	#calendar_wrap {}
-	#calendar_wrap th {}
-	#calendar_wrap td {}
-	#wp-calendar tr td {}
-	#wp-calendar caption {}
-	#wp-calendar a {}
-	#wp-calendar #today {}
-	#wp-calendar #prev {}
-	#wp-calendar #next {}
-	#wp-calendar #next a {}
-	#wp-calendar #prev a {}
-	
-	/* category widget */
-	.widget_categories {}
-	.widget_categories ul {}
-	.widget_categories ul li {} 
-	.widget_categories ul ul.children {}
-	.widget_categories a {}
-	.widget_categories select{}
-	.widget_categories select#cat {}
-	.widget_categories select.postform {}
-	.widget_categories option {}
-	.widget_categories .level-0 {}
-	.widget_categories .level-1 {}
-	.widget_categories .level-2 {}
-	.widget_categories .level-3 {}
-	
-	/* recent-comments widget */
-	.recentcomments {}
-	#recentcomments {}
-	#recentcomments li {}
-	#recentcomments li a {}
-	.widget_recent_comments {}
-	
-	/* search widget */
-	#searchform {}
-	.widget_search {}
-	.screen-reader-text {}
-	
-	/* text widget */
-	.textwidget {}
-	.widget_text {}
-	.textwidget p {}
-	
-
-/******************************************************************
-FOOTER STYLES
-******************************************************************/
-
-footer[role=contentinfo] {
-	border-top: 1px solid #cecece; 
-	padding: 1.1em 0 3.3em; 
-	margin-top: 2.2em;
-}
-
-	/* footer menu */
-	footer[role=contentinfo] nav {
-		float: left;
-		margin: 1em 0;
-	}
-	.footer-links {}
-		.footer-links ul {}
-			.footer-links ul li {}
-				.footer-links ul li a {}
-					.footer-links ul li:last-child a {}
-			.footer-links ul li a:hover, .nav ul li.current-menu-item a, .nav ul li.current_page_item a {}
-			.footer-links ul li ul.sub-menu {} /* you shouldn't have that many links in the footer anyway so it's set to display none ;P */
-			
-	.attribution {
-		margin: 1em 0;
-	}
-
-	
-/******************************************************************
-MEDIA QUERIES & DEVICE STYLES
-To use a responsive design, it's reccomended to use the responsive version of Bones. You can find it on github: https://github.com/eddiemachado/bones-responsive
-******************************************************************/
-
-@media only screen and (min-width: 480px) {
-	/* insert styles here */
-}
-
-@media only screen and (min-width: 768px) {
-/* insert styles here */
-}
-
-@media only screen and (min-width: 992px) {
-/* insert styles here */
-}
-
-@media only screen and (min-width: 1382px) {
-/* insert styles here */
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
-/* insert styles here */
-}
-
-/******************************************************************
-PRINT STYLES
-(Handled by default, but if you want to edit it, feel free)
-******************************************************************/
-
-@media print { }
-
-/******************************************************************
-IE SPECIFIC FIXES
-******************************************************************/
-
-/*
-Thanks to the HTML5 Boilerplate there's an easier way
-to target IE specific bugs. Simply use the html class
-to target the specific version of IE.
-
-To target the .post_content area in IE6, use:
-html.ie6 .post_content { ... }
-
-To target the .post_content area in IE7, use:
-html.ie7 .post_content { ... }
-
-To target the .post_content area in IE8, use:
-html.ie8 .post_content { ... }
-
-
-Much easier right? This way, you don't have to call
-any more stylesheets, you can leave it at the bottom
-and it will overwrite depending on the html class.
-*/
+.bones_page_navi li a:hover { color: #222; text-decoration: underline; }
+.bones_page_navi li.bpn-current { border-bottom: 2px solid #222; } /* current page link */

@@ -2,19 +2,21 @@
 			
 			<div id="content" class="clearfix">
 			
-				<div id="main" class="col540 left clearfix" role="main">
+				<div id="main" class="col620 left first clearfix" role="main">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
+					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						
 						<header>
 							
-							<h1 class="page-title"><?php the_title(); ?></h1>
+							<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
+							
+							<p class="meta"><?php _e("Posted", "bonestheme"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?>.</p>
 						
 						</header> <!-- end article header -->
 					
-						<section class="post_content clearfix">
+						<section class="post_content clearfix" itemprop="articleBody">
 							<?php the_content(); ?>
 					
 						</section> <!-- end article section -->
@@ -47,10 +49,6 @@
 					<?php endif; ?>
 			
 				</div> <!-- end #main -->
-					
-                                <nav class="col300 right clearfix" role="navigation">
-                                        <?php oyake_main_nav(); // Adjust using Menus in Wordpress Admin ?>
-                                </nav>
     
 			</div> <!-- end #content -->
 
